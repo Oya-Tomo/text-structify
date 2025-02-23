@@ -12,7 +12,7 @@ export default defineConfig({
     rollupOptions: {
       input: {
         sidePanel: "/sidePanel/index.html",
-        background: "/background/service_worker.ts",
+        background: "/background/main.ts",
       },
       output: {
         entryFileNames: "assets/[name].js",
