@@ -3,7 +3,7 @@
   "manifest_version": 3,
   "name": "Text Structify",
   "version": "0.0.0",
-  "permissions": ["sidePanel"],
+  "permissions": ["sidePanel", "scripting", "contextMenus"],
   "side_panel": {
     "default_path": "sidePanel/index.html"
   },
