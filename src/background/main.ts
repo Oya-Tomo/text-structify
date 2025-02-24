@@ -12,8 +12,11 @@ chrome.runtime.onInstalled.addListener(() => {
 
 chrome.contextMenus.onClicked.addListener((info) => {
   if (info.menuItemId === "translateSelectedText") {
-    chrome.tabs.create({
-      url: `https://translate.google.com/?sl=auto&tl=en&text=${info.selectionText}`,
-    });
+    if (info.selectionText && info.selectionText?.length > 0) {
+      chrome.runtime.sendMessage({
+        action: "translateSelectedText",
+        text: info.selectionText,
+      });
+    }
   }
 });
